@@ -18,14 +18,6 @@
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-
-        <section id="downloads">
-          {% if site.show_downloads %}
-            <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-            <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-          {% endif %}
-          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
       </div>
     </header>
 
@@ -34,5 +26,17 @@
         {{ content }}
       </section>
     </div>
+    <footer style="text-align:center">
+        <section id="downloads">
+            {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
+            <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
+            {% endif %}
+            <a href="{{ site.github.repository_url }}" target="_blank" class="btn btn-github" style="height: 23px; padding: 10px;"><span class="icon"></span>View on GitHub</a>
+            <a href="https://twitter.com/0xrDan" target="_blank" class="btn" style="height: 23px; padding: 10px;"><span class="icon"><img src="assets/images/twr.svg" /></span>Twitter</a>
+            <a href="https://bandcamp.com/RadioDan" target="_blank" class="btn"><img src="assets/images/bc.png" width="90" style="vertical-align: middle;" /></a>
+        </section>
+        <a href="https://etherscan.io/address/0xrdan.eth" target="_blank">0xrDan.eth</a><br /><br />
+    </footer>
   </body>
 </html>
